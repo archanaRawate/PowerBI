@@ -1,0 +1,49 @@
+The link contains data and Power BI Dashboard Kindly click the link and take a tour of Performance Dashboard 
+:- https://drive.google.com/drive/folders/1bGHbpNITA_ewjqpxN7vxJO7ThKia4KNP?usp=sharing
+
+Finding:-
+I have created a performance dashboard to analyze business performance over specific time periods, 
+segmented by division, branch, hour, and executive. This allows us to compare the company's expected 
+output with the actual results. **The company aimed for 80% resource utilization, 
+but using Business Intelligence (BI), I found that the actual utilization was 84%.*** 
+**This indicates that the company not only met but exceeded its desired results.***
+
+Work:-
+The file contains 3 Dataset namely Hour(January, February and March), Budgets and forcasts and People and task.
+I have craeted adition Calender table for year wise data. In  calender table above columns has craeted with below given formulas:-
+Date = CALENDAR( MIN(Hours[Date]), MAX(Hours[Date]) )
+IsWorkDay = IF([WeekdayNum]<=5 ,1, 0)
+Month = FORMAT([Date],"MMMM")
+MonthNum = MONTH([Date])
+Weekday = FORMAT([Date],"dddd")
+WeekdayNum = WEEKDAY([Date],2)
+WeekNum = WEEKNUM([Date])
+WorkHours = IF([IsWorkDay],8,0)
+Year = YEAR([Date])
+
+
+Cleaned the data  specialy recomend if your data is not big clean data before uploading it to power BI.
+After claening  changed datatype in desired formate.
+Tasks and Hours are merger and new column has added in hours table "taskID"
+
+Created relationship calender and hours, People and Hours and hours and category.
+Calender and hours relationship establish on "Date".
+People and  hours respectively ID and Employee ID.
+Hours and Categoty on Category.
+
+After establishing relationship.
+Proceed for creating calculated columns and measures details please visite the Dashboard.
+
+UTILIZATION PAGE:-
+1st table  shows category wise perforamnce of working hours.
+2nd Performance by individual.
+3rd and 4th are top  performer and worst performer respectivly.
+
+Executive Summery is for Executive level where shown the data for Division, Branch and hourly work by Group od devision.
+
+Divison Management Page :- It shows the Category wise houry performance, Employee type utilization salaried, contractor and hourly and from that found ourly employee utilzation is 100 percent.
+Division wise utilization shown Technology Divison has Highest utilization i.e 88%
+
+**Every page i have created the controls with help of controls anybody can navigate the report.**
+Please visit the BI dashboard, suggestions are welcome.
+ 
